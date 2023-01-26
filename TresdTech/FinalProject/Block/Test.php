@@ -5,6 +5,4 @@ namespace TresdTech\FinalProject\Block;
 
      class Test extends Template{
 
-
-
 }
