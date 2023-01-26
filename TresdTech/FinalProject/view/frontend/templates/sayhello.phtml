@@ -1,0 +1,126 @@
+        <form class="form_main" action=<?php echo $block->getUrl('finalproject/index/submit'); ?> method="POST" data-mage-init='{"validation": {}}'>
+
+         <div class= "form">
+
+            <div class="">
+                <label for="fisrt_name" class="form_label">Fisrt Name</label>
+                <div class="form_group_input">
+                    <input type="text" class="form_input required-entry validate-alphanum-with-spaces" name="fisrt_name" id="fisrt_name"
+                        placeholder="Jony">
+                </div>
+            </div>
+
+            <div class="">
+                <label for="last_name" class="form_label">Last Name</label>
+                <div class="form_group_input">
+                    <input type="text" class="form_input required-entry validate-alphanum-with-spaces" name="last_name" id="last_name"
+                        placeholder="Santa">
+                </div>
+            </div>
+
+            <div class="">
+                <label for="email" class="form_label">Email</label>
+                <div class="form_group_input">
+                    <input type="email" class="form_input required-entry validate-email" name="email" id="email"
+                        placeholder="email@email.com">
+                </div>
+            </div>
+
+            <div class="">
+                <label for="telephone" class="form_label">Telephone</label>
+                <div class="form_group_input">
+                    <input type="text" class="form_input required-entry phoneUS" name="telephone" id="telephone"
+                        placeholder="5566887496">
+                </div>
+            </div>
+
+            <div class="form_group_button_save">
+                <button type="submit" class="form_button">Save</button>
+            </div>
+
+            </div>
+
+        </form>
+
+<style> 
+.form_main {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.form_label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form_group_input {
+    position: relative;
+}
+
+.form_input {
+    width: 80%;
+    height: 45px;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.form_input:focus {
+    border: 3px solid rgb(0, 81, 255);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 163, 0.4);
+}
+
+.form_group_button_save {
+    grid-column: span 2;
+}
+
+.form_group_button_save {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_button {
+    height: 45px;
+    width: 18%;
+    background: rgb(0, 61, 110);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form_button:hover {
+background: rgb(0, 124, 226);
+}
+
+@media screen and (max-width: 800px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .form_group_button_save {
+        grid-column: 1;
+    }
+
+    .form_button {
+        width: 100%;
+    }
+}
+
+</style>

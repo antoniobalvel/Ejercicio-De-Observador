@@ -1,0 +1,103 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    td,
+    th {
+        border: 1px solid #011f63;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #bfcef7;
+    }
+
+    .id, .fisrt_name, .last_name, .email, .telephone {
+        font-size:16px;
+        text-align: center;
+        background: rgb(0, 61, 110);
+        color:#fff;
+    }
+
+.button{
+    height: 45px;
+    width: 10%;
+    background: rgb(0, 61, 110);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin:50px 0px 0px 0px;
+}
+
+.button:hover {
+background: rgb(0, 124, 226);
+}
+    
+.form_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paragraph {
+text-align:center;
+font-weight:bold;
+font-size:30px;
+color:#d61200;
+font-family: arial, sans-serif;
+}
+
+</style>
+
+<div>
+<table>
+    <tr>
+        <th class="id">Id</th>
+        <th class="fisrt_name">Fisrt Name</th>
+        <th class="last_name">Last Name</th>
+        <th class="email">Email</th>
+        <th class="telephone">Telephone</th>
+    </tr>
+
+
+
+    <?php
+
+if(count($block->getPostCollection()) > 0){
+
+ foreach ($block->getPostCollection() as $key => $post) {
+
+        echo '<tr>
+                    <td>' . $post->getId() . '</td>
+                    <td>' . $post->getFisrtName() . '</td>
+                    <td>' . $post->getLastName() . '</td>
+                    <td>' . $post->getEmail() . '</td>
+                    <td>' . $post->getTelephone() . '</td>
+              </tr>';
+    }
+} else {
+
+echo '<p class= "paragraph" > NO HAY REGISTROS </p>';
+
+};
+
+    ?>
+
+</table>
+</div>
+
+<div>
+<form action=<?php echo $block->getUrl('finalproject/index/form'); ?> class="form_button">
+        <input type="submit" value="Go To The Form" class="button">
+    </form>
+</div>
+
+</body>
+</html>
