@@ -6,9 +6,8 @@
     </event>
 
 
-    <!-- <event name="checkout_cart_product_add_after">
-        <observer name="tresdtech_finalproject_car"
-            instance="TresdTech\FinalProject\Observer\Car" />
-    </event> -->
+    <event name="checkout_cart_product_add_after">
+        <observer name="tresdtech_finalproject_car" instance="TresdTech\FinalProject\Observer\Car" />
+    </event>
 
 </config>
