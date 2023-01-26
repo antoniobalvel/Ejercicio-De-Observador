@@ -7,7 +7,7 @@ use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Psr\Log\LoggerInterface;
 
-class Checkout implements ObserverInterface
+class LimitQty implements ObserverInterface
 {
     /**
      * @var LoggerInterface

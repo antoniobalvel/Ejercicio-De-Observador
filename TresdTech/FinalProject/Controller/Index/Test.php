@@ -1,7 +1,7 @@
 <?php
 namespace TresdTech\FinalProject\Controller\Index;
 
-class Form extends \Magento\Framework\App\Action\Action
+class Test extends \Magento\Framework\App\Action\Action
 {
 
 	protected $_pageFactory;
@@ -20,7 +20,3 @@ class Form extends \Magento\Framework\App\Action\Action
 	}
 
 }
-
-
-
-
